@@ -1,5 +1,5 @@
 {
-  "name": "about-ts",
+  "name": "about-me-ts",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,10 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.2",
     "core-js": "^3.6.5",
+    "postcss": "^8.4.6",
+    "tailwindcss": "^3.0.20",
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.0-0",
