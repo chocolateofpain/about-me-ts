@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <Polaroid title="Killer Bunny is here" />
     <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br />
@@ -112,8 +113,10 @@
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
+import Polaroid from "./Polaroid.vue";
 
 @Options({
+  components: { Polaroid },
   props: {
     msg: String,
   },
