@@ -7,6 +7,7 @@ const routes: Array<RouteRecordRaw> = [
     name: "Home",
     component: Home,
   },
+  { path: "/home", redirect: "/" },
   {
     path: "/about",
     name: "About",
@@ -16,11 +17,19 @@ const routes: Array<RouteRecordRaw> = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
+  // TODO: clean up & unify names of section
+  { path: "/about me", redirect: "/about" },
   {
     path: "/projects",
     name: "Projects",
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/Projects.vue"),
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Contact.vue"),
   },
   {
     path: "/random",
