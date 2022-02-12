@@ -2,14 +2,16 @@
   <div
     class="border hover:shadow-2xl hover:underline p-2 shadow-lg w-[250px] h-[300px]"
   >
-    <img :src="getImageUrl()" v-bind:alt="image" width="250" height="250" />
-    <div class="mt-4">
-      {{ myTitle }}
-    </div>
+    <router-link :to="routerLink">
+      <img :src="imageUrl" v-bind:alt="image" width="250" height="250" />
+      <div class="mt-4">
+        {{ polaroidTitle }}
+      </div>
+    </router-link>
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, onMounted, computed } from "vue";
+import { defineComponent, computed } from "vue";
 
 export default defineComponent({
   name: "Polaroid",
@@ -18,36 +20,17 @@ export default defineComponent({
     image: String,
   },
   setup(props) {
-    const myTitle = computed(() => props.title || "Hello Murder Raccoon");
+    const polaroidTitle = computed(() => props.title || "Hello Murder Raccoon");
 
-    const getImageUrl = () => {
-      return require("../assets/" + props.image);
-    };
+    const imageUrl = computed(() => require("../assets/" + props.image));
 
-    onMounted(() => console.log("Your thing is mounted"));
+    const routerLink = computed(() => `/${props.title?.toLowerCase()}`);
 
     return {
-      myTitle,
-      getImageUrl,
+      polaroidTitle,
+      imageUrl,
+      routerLink,
     };
   },
 });
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
