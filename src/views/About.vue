@@ -1,14 +1,14 @@
 <template>
-  <div class="home view-container">About</div>
+    <Bio />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
-import Landing from "@/components/Landing.vue"; // @ is an alias to /src
+import Bio from "@/components/Bio.vue";
 
 @Options({
   components: {
-    Landing,
+    Bio,
   },
 })
 export default class About extends Vue {}
