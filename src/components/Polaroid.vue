@@ -20,7 +20,7 @@ export default defineComponent({
   setup(props) {
     const myTitle = computed(() => props.title || "Hello Murder Raccoon");
 
-    const getImageUrl = (image: string) => {
+    const getImageUrl = () => {
       return require("../assets/" + props.image);
     };
 

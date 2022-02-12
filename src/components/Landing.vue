@@ -1,10 +1,9 @@
 <template>
-  <div class="grid gap-4 grid-cols-2 justify-center w-[fit-content] home-grid">
+  <div class="grid gap-4 grid-cols-2 justify-center w-[fit-content]">
     <Polaroid :title="menuItems.ABOUTME" image="berlin_png.png" />
     <Polaroid :title="menuItems.CONTACT" image="metro.png" />
     <Polaroid :title="menuItems.PROJECTS" image="palmtree.png" />
     <Polaroid :title="menuItems.RANDOM" image="beach.png" />
-    {{ title }}
   </div>
 </template>
 <script lang="ts">
@@ -12,7 +11,7 @@ import { defineComponent, onMounted, reactive } from "vue";
 import Polaroid from "./Polaroid.vue";
 
 export default defineComponent({
-  name: "Home",
+  name: "Landing",
   components: { Polaroid },
   setup() {
     const menuItems = reactive({
@@ -30,8 +29,3 @@ export default defineComponent({
   },
 });
 </script>
-<style scoped>
-.home-grid {
-  /* width: fit-content; */
-}
-</style>
