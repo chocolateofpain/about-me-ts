@@ -7,7 +7,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "Bio",
+  name: "Header",
   props: {
     title: String,
   },
