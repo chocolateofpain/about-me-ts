@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-[200px,auto]">
+  <div class="grid grid-cols-[200px,minmax(400px,900px)]">
     <div class="flex flex-col w-[200px]" id="nav">
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
@@ -17,7 +17,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 
 #nav {
