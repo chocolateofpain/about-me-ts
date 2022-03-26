@@ -21,8 +21,6 @@ export default defineComponent({
       RANDOM: "Random",
     });
 
-    onMounted(() => console.log("Your thing is mounted"));
-
     return {
       menuItems,
     };

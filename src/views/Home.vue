@@ -5,13 +5,14 @@
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
+import { defineComponent } from "vue";
 import Landing from "@/components/Landing.vue"; // @ is an alias to /src
 
-@Options({
-  components: {
-    Landing,
+export default defineComponent({
+  name: "Home",
+  components: { Landing },
+  setup() {
+    return {};
   },
-})
-export default class Home extends Vue {}
+});
 </script>
