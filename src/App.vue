@@ -1,10 +1,10 @@
 <template>
-  <div class="grid grid-cols-[200px,minmax(400px,900px)]">
+  <div class="relative">
     <Transition mode="out-in">
-      <Navbar v-if="showNavbar" />
+      <Navbar v-if="showNavbar" class="absolute bg-red-100" />
       <div v-else />
     </Transition>
-    <router-view />
+    <router-view :class="{ 'ml-48': showNavbar }" />
   </div>
 </template>
 
@@ -50,12 +50,16 @@ export default defineComponent({
 }
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.5s ease;
+  top: 10px;
+  transition: all 0.5s ease-in-out;
+  /* transform-origin: left top;
+  transition: transform 1s; */
+  /* // transition: opacity 0.5s ease; */
   /* transform: translate(20px, 20px) 1s; */
 }
 
 .v-enter-from,
 .v-leave-to {
-  opacity: 0;
+  top: -1000px;
 }
 </style>
