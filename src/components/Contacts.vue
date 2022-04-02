@@ -18,5 +18,8 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "Contacts",
+  setup(props) {
+    return {};
+  },
 });
 </script>

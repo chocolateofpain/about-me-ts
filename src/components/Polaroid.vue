@@ -1,6 +1,6 @@
 <template>
   <div
-    class="border hover:shadow-2xl hover:underline p-2 shadow-lg w-[250px] h-[300px]"
+    class="border hover:shadow-3xl hover:underline shadow-md p-2 w-[250px] h-[300px] transition-all duration-1000"
   >
     <router-link :to="routerLink">
       <img :src="imageUrl" v-bind:alt="image" width="250" height="250" />

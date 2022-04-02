@@ -1,17 +1,21 @@
 <template>
   <div class="view-container">
     <Header title="Random" />
+    <div>Hover here</div>
+    <MyFloatingThingy />
   </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
+import { defineComponent } from "vue";
 import Header from "@/components/Header.vue";
+import MyFloatingThingy from "@/components/MyFloatingThingy.vue";
 
-@Options({
+export default defineComponent({
+  name: "Random",
   components: {
     Header,
+    MyFloatingThingy,
   },
-})
-export default class Random extends Vue {}
+});
 </script>
