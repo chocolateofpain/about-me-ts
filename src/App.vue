@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <Transition mode="out-in">
-      <Navbar v-if="showNavbar" class="absolute bg-red-100" />
+      <Navbar v-if="showNavbar" class="absolute" />
       <div v-else />
     </Transition>
     <router-view :class="{ 'ml-48': showNavbar }" />
@@ -42,11 +42,10 @@ export default defineComponent({
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #0369a1;
 }
 .v-enter-active,
 .v-leave-active {

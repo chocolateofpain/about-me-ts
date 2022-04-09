@@ -1,6 +1,6 @@
 <template>
   <div
-    class="border hover:shadow-3xl hover:underline shadow-md p-2 w-[250px] h-[300px] transition-all duration-1000"
+    :class="`border hover:shadow-3xl hover:underline shadow-md p-2 w-[${width}px] h-[${height}px] transition-all duration-1000`"
   >
     <router-link :to="routerLink">
       <img :src="imageUrl" v-bind:alt="image" width="250" height="250" />
@@ -18,6 +18,14 @@ export default defineComponent({
   props: {
     title: String,
     image: String,
+    height: {
+      type: Number,
+      default: 300,
+    },
+    width: {
+      type: Number,
+      default: 250,
+    },
   },
   setup(props) {
     const polaroidTitle = computed(() => props.title || "Hello Murder Raccoon");

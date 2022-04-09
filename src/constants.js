@@ -16,3 +16,11 @@ export const sections = {
     image: "beach.png",
   },
 };
+
+export const menuItems = {
+  ABOUTME: "About me",
+  CONTACT: "Contact",
+  HOME: "Home",
+  PROJECTS: "Projects",
+  RANDOM: "Random",
+};
