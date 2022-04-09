@@ -7,12 +7,19 @@
       both your monitoring and raccoon needs.
     </p>
     <p>When doodling I usually draw cute animals.</p>
+    <div>
+      <Arrow />
+    </div>
   </article>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
+import Arrow from "./Arrow.vue";
 
 export default defineComponent({
   name: "Bio",
+  components: {
+    Arrow,
+  },
 });
 </script>
