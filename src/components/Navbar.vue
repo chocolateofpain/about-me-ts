@@ -6,40 +6,40 @@
     <router-link to="/">
       <Polaroid
         :title="menuItems.HOME"
-        width="125"
-        height="150"
+        :width="125"
+        :height="150"
         image="berlin_png.png"
       />
     </router-link>
     <router-link to="/about">
       <Polaroid
         :title="menuItems.ABOUTME"
-        width="125"
-        height="150"
+        :width="125"
+        :height="150"
         image="berlin_png.png"
       />
     </router-link>
     <router-link to="/projects">
       <Polaroid
         :title="menuItems.PROJECTS"
-        width="125"
-        height="150"
+        :width="125"
+        :height="150"
         image="palmtree.png"
       />
     </router-link>
     <router-link to="/random">
       <Polaroid
         :title="menuItems.RANDOM"
-        width="125"
-        height="150"
+        :width="125"
+        :height="150"
         image="beach.png"
       />
     </router-link>
     <router-link to="/contact">
       <Polaroid
         :title="menuItems.CONTACT"
-        width="125"
-        height="150"
+        :width="125"
+        :height="150"
         image="metro.png"
       />
     </router-link>
