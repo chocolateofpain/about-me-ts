@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html,body,#app {
+  height: 100%;
+  width: 100%
+}
 .view-container {
   padding: 20px;
 }

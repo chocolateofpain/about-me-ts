@@ -1,13 +1,9 @@
 <template>
-  <div
-    :class="`border hover:shadow-3xl hover:underline shadow-md p-2 w-[${width}px] h-[${height}px] transition-all duration-1000`"
-  >
-    <router-link :to="routerLink">
-      <img :src="imageUrl" v-bind:alt="image" width="250" height="250" />
-      <div class="mt-4">
-        {{ polaroidTitle }}
-      </div>
-    </router-link>
+  <div :class="`border hover:shadow-3xl hover:underline shadow-md p-2`">
+    <img :src="imageUrl" :alt="image" />
+    <div class="mt-2 sm:mt-4">
+      {{ polaroidTitle }}
+    </div>
   </div>
 </template>
 <script lang="ts">
@@ -19,25 +15,26 @@ export default defineComponent({
     title: String,
     image: String,
     height: {
-      type: Number,
-      default: 300,
+      type: Number || String,
+      default: "auto",
     },
     width: {
-      type: Number,
-      default: 250,
+      type: Number || String,
+      default: "auto",
+    },
+    size: {
+      type: String,
+      default: "medium",
     },
   },
   setup(props) {
-    const polaroidTitle = computed(() => props.title || "Hello Murder Raccoon");
+    const polaroidTitle = computed(() => props.title);
 
     const imageUrl = computed(() => require("../assets/" + props.image));
-
-    const routerLink = computed(() => `/${props.title?.toLowerCase()}`);
 
     return {
       polaroidTitle,
       imageUrl,
-      routerLink,
     };
   },
 });

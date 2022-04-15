@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div class="relative h-full">
     <Transition mode="out-in" :isAnimated="showNavbar">
       <Navbar v-if="showNavbar" class="absolute" :isAnimated="showNavbar" />
       <div v-else />
@@ -12,7 +12,6 @@
 import { computed, defineComponent } from "vue";
 import Navbar from "@/components/Navbar.vue";
 import { useRoute } from "vue-router";
-import { routes } from "./router/index";
 
 export default defineComponent({
   name: "App",
