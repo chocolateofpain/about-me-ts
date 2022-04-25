@@ -1,14 +1,15 @@
 <template>
   <div
-    class="grid grid-rows-4 w-[150px] h-full gap-2 text-sky-900 active:text-sky-400"
+    class="grid h-full grid-rows-4 gap-2 p-5 text-base text-sky-900 active:text-sky-400"
     id="nav"
   >
     <router-link
+      class="font-light text-gray-900 no-underline uppercase hover:font-bold"
       v-for="item in availableLinks"
       :to="item.to"
       v-bind:key="item.title"
     >
-      <Polaroid :title="item.title" :image="item.image" />
+      <Polaroid :title="item.title" :image="item.image" size="small" />
     </router-link>
   </div>
 </template>

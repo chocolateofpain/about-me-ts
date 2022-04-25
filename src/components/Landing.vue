@@ -1,16 +1,11 @@
 <template>
-  <div class="grid gap-4 grid-cols-2 w-[600px] justify-center">
+  <div class="grid justify-center grid-cols-2 gap-4">
     <router-link
       v-for="item in landingPageLinks"
       :key="item.title"
       :to="item.to"
     >
-      <Polaroid
-        :title="item.title"
-        :image="item.image"
-        :width="250"
-        :height="300"
-      />
+      <Polaroid :title="item.title" :image="item.image" />
     </router-link>
   </div>
 </template>
