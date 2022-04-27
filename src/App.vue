@@ -1,10 +1,10 @@
 <template>
-  <div class="relative">
+  <div class="relative h-full">
     <Transition mode="out-in" :isAnimated="showNavbar">
       <Navbar v-if="showNavbar" class="absolute" :isAnimated="showNavbar" />
       <div v-else />
     </Transition>
-    <router-view :class="{ 'ml-48': showNavbar }" />
+    <router-view :class="{ 'ml-40': showNavbar }" />
   </div>
 </template>
 
@@ -12,7 +12,6 @@
 import { computed, defineComponent } from "vue";
 import Navbar from "@/components/Navbar.vue";
 import { useRoute } from "vue-router";
-import { routes } from "./router/index";
 
 export default defineComponent({
   name: "App",
@@ -37,18 +36,10 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-}
-
+/* 
 #nav a.router-link-exact-active {
-  color: #0369a1;
-}
+  color: #161717;
+} */
 .v-enter-active,
 .v-leave-active {
   top: 10px;
