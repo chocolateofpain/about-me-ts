@@ -39,7 +39,7 @@ export const navbarItems = [
   {
     title: "Contact",
     image: "everything-ok.jpg",
-    to: "contact",
+    to: "/contact",
   },
   {
     title: "Projects",
