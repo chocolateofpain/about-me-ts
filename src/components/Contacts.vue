@@ -1,5 +1,7 @@
 <template>
-  <div class="w-[250px] grid justify-center grid-cols-1 gap-4 md:grid-cols-4">
+  <div
+    class="sm:w-[250px] grid justify-center grid-cols-1 gap-4 sm:grid-cols-4"
+  >
     <a href="https://github.com/chocolateofpain" target="_blank">
       <svg fill="#000000" viewBox="0 0 24 24" width="48px" height="48px">
         <path
