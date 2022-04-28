@@ -1,23 +1,35 @@
 <template>
-  <article class="text-left">
-    <div class="grid justify-center grid-cols-2">
-      <a class="block" href="https://github.com/chocolateofpain" target="_blank"
-        >Github
-      </a>
-      <a
-        class="block"
-        href="https://twitter.com/chocolateofpain"
-        target="_blank"
-        >Twitter
-      </a>
-    </div>
-  </article>
+  <div
+    class="sm:w-[250px] grid justify-center grid-cols-1 gap-4 sm:grid-cols-4"
+  >
+    <a href="https://github.com/chocolateofpain" target="_blank">
+      <svg fill="#000000" viewBox="0 0 24 24" width="48px" height="48px">
+        <path
+          d="M10.9,2.1c-4.6,0.5-8.3,4.2-8.8,8.7c-0.5,4.7,2.2,8.9,6.3,10.5C8.7,21.4,9,21.2,9,20.8v-1.6c0,0-0.4,0.1-0.9,0.1 c-1.4,0-2-1.2-2.1-1.9c-0.1-0.4-0.3-0.7-0.6-1C5.1,16.3,5,16.3,5,16.2C5,16,5.3,16,5.4,16c0.6,0,1.1,0.7,1.3,1c0.5,0.8,1.1,1,1.4,1 c0.4,0,0.7-0.1,0.9-0.2c0.1-0.7,0.4-1.4,1-1.8c-2.3-0.5-4-1.8-4-4c0-1.1,0.5-2.2,1.2-3C7.1,8.8,7,8.3,7,7.6C7,7.2,7,6.6,7.3,6 c0,0,1.4,0,2.8,1.3C10.6,7.1,11.3,7,12,7s1.4,0.1,2,0.3C15.3,6,16.8,6,16.8,6C17,6.6,17,7.2,17,7.6c0,0.8-0.1,1.2-0.2,1.4 c0.7,0.8,1.2,1.8,1.2,3c0,2.2-1.7,3.5-4,4c0.6,0.5,1,1.4,1,2.3v2.6c0,0.3,0.3,0.6,0.7,0.5c3.7-1.5,6.3-5.1,6.3-9.3 C22,6.1,16.9,1.4,10.9,2.1z"
+        />
+      </svg>
+    </a>
+    <a href="https://twitter.com/chocolateofpain" target="_blank">
+      <svg fill="#000000" viewBox="0 0 24 24" width="48px" height="48px">
+        <path
+          d="M17,3H7C4.791,3,3,4.791,3,7v10c0,2.209,1.791,4,4,4h10c2.209,0,4-1.791,4-4V7C21,4.791,19.209,3,17,3z M17.05,9.514 c0,0.086,0,0.171,0,0.343c0,3.257-2.486,7.029-7.029,7.029c-1.371,0-2.657-0.429-3.771-1.114c0.171,0,0.429,0,0.6,0 c1.114,0,2.229-0.429,3.086-1.029c-1.114,0-1.971-0.771-2.314-1.714c0.171,0,0.343,0.086,0.429,0.086c0.257,0,0.429,0,0.686-0.086 c-1.114-0.257-1.971-1.2-1.971-2.4c0.343,0.171,0.686,0.257,1.114,0.343c-0.686-0.6-1.114-1.286-1.114-2.143 c0-0.429,0.086-0.857,0.343-1.2c1.2,1.457,3,2.486,5.057,2.571c0-0.171-0.086-0.343-0.086-0.6c0-1.371,1.114-2.486,2.486-2.486 c0.686,0,1.371,0.257,1.8,0.771c0.6-0.086,1.114-0.343,1.543-0.6c-0.171,0.6-0.6,1.029-1.114,1.371 c0.514-0.086,0.943-0.171,1.457-0.429C17.907,8.743,17.479,9.171,17.05,9.514z"
+        />
+      </svg>
+    </a>
+    <MailIcon class="w-[48px]" />
+    <MicrophoneIcon class="w-[48px]" />
+  </div>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
+import { MailIcon, MicrophoneIcon } from "@heroicons/vue/solid";
 
 export default defineComponent({
   name: "Contacts",
+  components: {
+    MailIcon,
+    MicrophoneIcon,
+  },
   setup(props) {
     return {};
   },

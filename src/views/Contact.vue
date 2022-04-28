@@ -1,20 +1,20 @@
 <template>
-  <div class="view-container">
+  <div class="flex flex-col items-center justify-center view-container">
     <Header title="Contact" />
     <Contacts />
   </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
+import { defineComponent } from "vue";
 import Header from "@/components/Header.vue";
 import Contacts from "@/components/Contacts.vue";
 
-@Options({
+export default defineComponent({
+  name: "Contact",
   components: {
-    Contacts,
     Header,
+    Contacts,
   },
-})
-export default class Contact extends Vue {}
+});
 </script>
