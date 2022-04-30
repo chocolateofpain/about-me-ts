@@ -1,6 +1,5 @@
 <template>
   <div class="relative h-full">
-    <div>{{ width }}</div>
     <Transition mode="out-in" :isAnimated="showNavbar" v-if="!isSmallScreen">
       <Navbar v-if="showNavbar" class="absolute" :isAnimated="showNavbar" />
       <div v-else />
