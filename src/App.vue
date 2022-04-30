@@ -1,29 +1,63 @@
 <template>
   <div class="relative h-full">
-    <Transition mode="out-in" :isAnimated="showNavbar">
+    <div>{{ width }}</div>
+    <Transition mode="out-in" :isAnimated="showNavbar" v-if="!isSmallScreen">
       <Navbar v-if="showNavbar" class="absolute" :isAnimated="showNavbar" />
       <div v-else />
     </Transition>
+    <NavbarMenu v-if="showNavbar && isSmallScreen" />
+
     <router-view :class="{ 'ml-40': showNavbar }" />
   </div>
 </template>
 
 <script>
-import { computed, defineComponent } from "vue";
+import {
+  computed,
+  defineComponent,
+  onBeforeMount,
+  onUnmounted,
+  ref,
+} from "vue";
 import Navbar from "@/components/Navbar.vue";
+import NavbarMenu from "@/components/NavbarMenu.vue";
 import { useRoute } from "vue-router";
 
 export default defineComponent({
   name: "App",
-  components: { Navbar },
+  components: { Navbar, NavbarMenu },
   setup() {
     const route = useRoute();
     const showNavbar = computed(
       () => route.name !== "Home" && route.name !== undefined
     );
 
+    const width = ref(window.innerWidth);
+    const height = ref(window.innerHeight);
+
+    onBeforeMount(() => {
+      window.addEventListener("resize", onResize);
+    });
+
+    onUnmounted(() => {
+      window.removeEventListener("resize", onResize);
+    });
+
+    const onResize = () => {
+      width.value = window.innerWidth;
+      height.value = window.innerHeight;
+    };
+
+    const windowScreenWidth = ref(window.screen.width);
+
+    const isSmallScreen = computed(() => width.value < 620);
+
     return {
       showNavbar,
+      windowScreenWidth,
+      isSmallScreen,
+      width,
+      height,
     };
   },
 });
