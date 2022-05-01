@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center justify-center view-container">
+  <div class="flex flex-col items-center justify-center">
     <Header title="Contact" />
     <Contacts />
   </div>

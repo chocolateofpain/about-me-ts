@@ -1,5 +1,5 @@
 <template>
-  <div class="view-container">
+  <div>
     <Header title="Random" />
     <div>Hover here</div>
     <MyFloatingThingy />

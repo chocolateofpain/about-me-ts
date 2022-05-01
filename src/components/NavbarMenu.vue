@@ -1,18 +1,24 @@
 <template>
-  <MenuIcon @click="showMenu = !showMenu" class="w-[48px]" />
-  <div
-    v-if="showMenu"
-    class="grid h-full grid-rows-4 gap-2 p-5 text-base text-sky-900 active:text-sky-400"
-    id="nav"
-  >
-    <router-link
-      class="font-light text-gray-900 no-underline uppercase hover:font-bold"
-      v-for="item in availableLinks"
-      :to="item.to"
-      v-bind:key="item.title"
-    >
-      {{ item.title }}
-    </router-link>
+  <div class="relative">
+    <div class="w-full h-16 bg-white">
+      <MenuIcon @click="showMenu = !showMenu" class="w-[48px] z-20 bg-white" />
+    </div>
+    <Transition mode="out-in" class="absolute" :isAnimated="showMenu">
+      <div
+        v-if="showMenu"
+        class="grid w-full grid-rows-4 text-base bg-red-800 -z-10 text-sky-900"
+        id="nav"
+      >
+        <router-link
+          class="flex items-center justify-center h-16 font-light text-gray-900 no-underline uppercase bg-red"
+          v-for="item in availableLinks"
+          :to="item.to"
+          v-bind:key="item.title"
+        >
+          {{ item.title }}
+        </router-link>
+      </div>
+    </Transition>
   </div>
 </template>
 <script>
@@ -44,3 +50,15 @@ export default defineComponent({
   },
 });
 </script>
+<style scoped>
+.v-enter-active,
+.v-leave-active {
+  top: 64px;
+  transition: all 0.8s ease-in-out;
+}
+
+.v-enter-from,
+.v-leave-to {
+  top: -256px;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex place-content-center view-container">
+  <div class="flex place-content-center">
     <Landing />
   </div>
 </template>
