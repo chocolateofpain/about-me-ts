@@ -22,6 +22,9 @@ module.exports = {
           900: "#0c4a6e",
         },
       },
+      zIndex: {
+        "-10": "-10",
+      },
     },
   },
   variants: {

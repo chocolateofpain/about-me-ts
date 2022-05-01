@@ -1,13 +1,14 @@
 <template>
   <div class="relative h-full">
-    <div>{{ width }}</div>
     <Transition mode="out-in" :isAnimated="showNavbar" v-if="!isSmallScreen">
       <Navbar v-if="showNavbar" class="absolute" :isAnimated="showNavbar" />
       <div v-else />
     </Transition>
-    <NavbarMenu v-if="showNavbar && isSmallScreen" />
-
-    <router-view :class="{ 'ml-40': showNavbar }" />
+    <NavbarMenu
+      class="absolute top-0 left-0 z-10 w-full bg-white"
+      v-if="showNavbar && isSmallScreen"
+    />
+    <router-view :class="{ 'ml-40': showNavbar && !isSmallScreen }" />
   </div>
 </template>
 
@@ -50,7 +51,7 @@ export default defineComponent({
 
     const windowScreenWidth = ref(window.screen.width);
 
-    const isSmallScreen = computed(() => width.value < 620);
+    const isSmallScreen = computed(() => width.value < 640);
 
     return {
       showNavbar,
