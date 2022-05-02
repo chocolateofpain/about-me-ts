@@ -9,7 +9,7 @@
       v-if="showNavbar && isSmallScreen"
     />
     <router-view
-      :class="({ 'ml-40': showNavbar && !isSmallScreen }, 'bg-metro')"
+      :class="{ 'ml-40': showNavbar && !isSmallScreen }"
       :isSmallScreen="isSmallScreen"
     />
   </div>

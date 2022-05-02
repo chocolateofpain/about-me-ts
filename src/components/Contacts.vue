@@ -1,6 +1,6 @@
 <template>
   <div
-    class="ok bg-center bg-cover h-full w-full sm:w-[250px] grid justify-center grid-cols-1 gap-4 sm:grid-cols-5 pt-24 pb-52"
+    class="grid justify-center w-full h-full sm:w-[600px] grid-cols-1 gap-4 pt-24 bg-center bg-cover ok sm:grid-cols-4 pb-52"
   >
     <a
       href="https://github.com/chocolateofpain"
@@ -36,7 +36,7 @@
       </svg>
     </a>
     <a class="flex justify-center h-16" @click="onClick" :href="onClick()">
-      <MailIcon class="w-[48px]" />
+      <MailIcon class="h-[48px]" />
     </a>
   </div>
 </template>
