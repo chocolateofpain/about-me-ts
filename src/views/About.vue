@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <Header title="About" />
-    <Bio />
+  <div class="h-full">
+    <Header class="hidden sm:block" title="About" />
+    <Bio class="h-full bg-red-door" />
   </div>
 </template>
 

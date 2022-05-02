@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header title="Random" />
+    <Header class="hidden sm:block" title="Random" />
     <div>Hover here</div>
     <MyFloatingThingy />
   </div>

@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="`border hover:shadow-3xl w-[${width}px] hover:underline shadow-md p-2`"
+    :class="`bg-white border hover:shadow-3xl w-[${width}px] hover:underline shadow-md p-2`"
   >
     <img :src="imageUrl" :alt="image" :width="width" />
     <div class="mt-2 text-gray-900 no-underline uppercase hover:font-bold">
