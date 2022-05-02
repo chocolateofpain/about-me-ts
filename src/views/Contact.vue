@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col items-center justify-center">
-    <Header title="Contact" />
+  <div class="flex flex-col items-center justify-center h-full">
+    <Header class="hidden sm:block" title="Contact" />
     <Contacts />
   </div>
 </template>

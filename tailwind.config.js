@@ -25,6 +25,12 @@ module.exports = {
       zIndex: {
         "-10": "-10",
       },
+      backgroundImage: {
+        "red-door": "url('/src/assets/red-door.jpg')",
+        palmtree: "url('/src/assets/palmtree.png')",
+        metro: "url('/src/assets/metro.png')",
+        berlin: "url('/src/assets/berlin.jpg')",
+      },
     },
   },
   variants: {

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header title="Projects" />
+    <Header class="hidden sm:block" title="Projects" />
   </div>
 </template>
 

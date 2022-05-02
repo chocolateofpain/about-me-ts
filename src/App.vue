@@ -5,10 +5,13 @@
       <div v-else />
     </Transition>
     <NavbarMenu
-      class="absolute top-0 left-0 z-10 w-full bg-white"
+      class="absolute sticky top-0 left-0 z-10 w-full bg-white"
       v-if="showNavbar && isSmallScreen"
     />
-    <router-view :class="{ 'ml-40': showNavbar && !isSmallScreen }" />
+    <router-view
+      :class="{ 'ml-40': showNavbar && !isSmallScreen }"
+      :isSmallScreen="isSmallScreen"
+    />
   </div>
 </template>
 
