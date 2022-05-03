@@ -5,14 +5,16 @@
         @click="showMenu = !showMenu"
         class="w-[48px] z-20 bg-white text-gray-900"
       />
-      <h1 class="w-full font-light text-gray-900 uppercase pr-[48px]">
+      <h1
+        class="w-full text-2xl font-semibold text-gray-900 uppercase pr-[48px]"
+      >
         {{ currentPage.title }}
       </h1>
     </div>
     <Transition mode="out-in" class="absolute" :isAnimated="showMenu">
       <div
         v-if="showMenu"
-        class="grid w-full grid-rows-4 text-base bg-white -z-10 text-sky-900"
+        class="grid w-full grid-rows-4 text-base bg-white border divide-y -z-10 text-sky-900"
         id="nav"
       >
         <router-link

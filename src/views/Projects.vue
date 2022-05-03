@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="w-full h-full bg-center bg-cover bg-palmtree sm:bg-white">
     <Header class="hidden sm:block" title="Projects" />
   </div>
 </template>
