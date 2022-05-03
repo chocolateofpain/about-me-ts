@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="h-full bg-center bg-cover bg-berlin sm:bg-white">
     <Header class="hidden sm:block" title="Random" />
     <div>Hover here</div>
     <MyFloatingThingy />
