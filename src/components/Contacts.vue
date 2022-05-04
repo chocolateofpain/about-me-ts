@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid justify-center w-full h-full sm:w-[600px] grid-cols-1 gap-4 pt-24 bg-center bg-cover ok sm:grid-cols-4 pb-52"
+    class="text-white sm:text-black sm:text-color-black grid justify-center w-full h-full sm:w-[600px] grid-cols-1 gap-4 pt-24 sm:grid-cols-4 pb-52"
   >
     <a
       href="https://github.com/chocolateofpain"
@@ -14,7 +14,7 @@
       </svg>
     </a>
     <a
-      class="flex justify-center h-16"
+      class="flex justify-center h-16 text-white"
       href="https://twitter.com/chocolateofpain"
       target="_blank"
     >
@@ -59,15 +59,3 @@ export default defineComponent({
   },
 });
 </script>
-<style scoped>
-@media (max-width: 640px) {
-  .ok {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(110, 110, 112, 0.73),
-        rgba(110, 107, 109, 0.2)
-      ),
-      url(../assets/red-door.jpg);
-  }
-}
-</style>

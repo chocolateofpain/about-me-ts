@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-col items-center justify-center h-full">
+  <div
+    class="flex flex-col items-center justify-center h-full bg-center bg-cover backdrop-filter backdrop-grayscale photo"
+  >
     <Header class="hidden sm:block" title="Contact" />
     <Contacts />
   </div>
@@ -18,3 +20,11 @@ export default defineComponent({
   },
 });
 </script>
+<style scoped>
+@media (max-width: 640px) {
+  .photo {
+    background-image: url(../assets/everything-ok.jpg);
+    filter: grayscale(1);
+  }
+}
+</style>
