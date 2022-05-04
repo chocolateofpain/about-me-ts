@@ -8,10 +8,7 @@
       class="absolute sticky top-0 left-0 z-10 w-full bg-white"
       v-if="showNavbar && isSmallScreen"
     />
-    <router-view
-      :class="{ 'ml-40': showNavbar && !isSmallScreen }"
-      :isSmallScreen="isSmallScreen"
-    />
+    <router-view :class="{ 'ml-40': showNavbar && !isSmallScreen }" />
   </div>
 </template>
 
@@ -74,10 +71,7 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
-/* 
-#nav a.router-link-exact-active {
-  color: #161717;
-} */
+
 .v-enter-active,
 .v-leave-active {
   top: 10px;

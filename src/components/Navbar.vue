@@ -14,7 +14,7 @@
   </div>
 </template>
 <script>
-import { defineComponent, ref, computed } from "vue";
+import { defineComponent, computed } from "vue";
 import Polaroid from "./Polaroid.vue";
 import { navbarItems } from "./../constants";
 import { useRoute } from "vue-router";
@@ -30,12 +30,8 @@ export default defineComponent({
       navbarItems.filter((item) => item.to !== route.path)
     );
 
-    const windowScreenWidth = ref(window.screen.width);
-
-    console.log(window);
     return {
       availableLinks,
-      windowScreenWidth,
     };
   },
 });

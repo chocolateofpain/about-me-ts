@@ -1,6 +1,6 @@
 <template>
   <article
-    class="flex flex-col px-6 py-16 text-3xl text-justify text-white bg-center sm:text-lg sm:text-left sm:text-black bio"
+    class="flex flex-col px-6 py-16 text-3xl text-justify text-white sm:text-lg sm:text-left sm:text-black"
   >
     <p>
       I'm a Javascript developers with emphasis on Frontend technologies, mainly
