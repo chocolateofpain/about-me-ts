@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full bg-center bg-cover photo sm:bg-white">
+  <div class="h-full bg-center bg-cover bg-pool sm:bg-none sm:bg-white">
     <Header class="hidden sm:block" title="Random" />
   </div>
 </template>
@@ -15,16 +15,3 @@ export default defineComponent({
   },
 });
 </script>
-<style scoped>
-@media (max-width: 640px) {
-  .photo {
-    backdrop-filter: grayscale(var(--value, 100%));
-    background-image: linear-gradient(
-        to bottom,
-        rgba(38, 38, 39, 0.52),
-        rgba(110, 107, 109, 0.73)
-      ),
-      url(../assets/pool.jpg);
-  }
-}
-</style>

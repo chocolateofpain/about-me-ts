@@ -30,6 +30,8 @@ module.exports = {
         palmtree: "url('/palmtree.png')",
         metro: "url('//metro.png')",
         berlin: "url('/berlin.jpg')",
+        "everything-ok": "url('/everything-ok.jpg')",
+        pool: "url('/pool.jpg')",
       },
     },
   },
