@@ -52,3 +52,25 @@ export const navbarItems = [
     to: "/random",
   },
 ];
+
+export const randomItems = [
+  {
+    id: 1,
+    title: "Vocces Libres",
+    description: "An amazing charity supporting women and children in Bolivia",
+    link: "https://www.voixlibres.org/en/",
+  },
+  {
+    id: 2,
+    title: "Frauenloop",
+    description:
+      "Mentorship program to support women's and minorities' interest in tech",
+    link: "https://www.frauenloop.org/",
+  },
+  {
+    id: 3,
+    title: "Alfred de Crouton",
+    description: "Just my little fun project in my free time",
+    link: "to be determined",
+  },
+];
