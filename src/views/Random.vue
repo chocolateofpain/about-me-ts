@@ -1,6 +1,6 @@
 <template>
   <div
-    class="justify-center h-full bg-center bg-cover bg-pool sm:bg-none sm:bg-white"
+    class="justify-center bg-center bg-cover bg-pool-gradient sm:bg-none sm:bg-white"
   >
     <Header class="hidden sm:block" title="Random" />
     <div class="grid h-full grid-cols-1 place-items-center sm:grid-cols-2">
