@@ -28,10 +28,13 @@ module.exports = {
       backgroundImage: {
         "red-door": "url('/red-door.jpg')",
         palmtree: "url('/palmtree.png')",
-        metro: "url('//metro.png')",
+        metro: "url('/metro.png')",
         berlin: "url('/berlin.jpg')",
         "everything-ok": "url('/everything-ok.jpg')",
         pool: "url('/pool.jpg')",
+        pool2: "url('/pool-2.png')",
+        "pool-gradient":
+          "linear-gradient(to right bottom, rgba(38, 38, 39, 0.52), rgba(110, 107, 109, 0.73)), url('/pool-2.png')",
       },
     },
   },
