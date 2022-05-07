@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col items-center justify-center h-full bg-center bg-cover bg-everything-ok sm:bg-none sm:bg-white"
+    class="flex flex-col items-center justify-center bg-center bg-cover bg-everything-ok sm:bg-none sm:bg-white"
   >
     <Header class="hidden sm:block" title="Contact" />
     <Contacts class="backdrop-filter backdrop-grayscale" />

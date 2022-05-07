@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full bg-center bg-cover bio">
+  <div class="bg-center bg-cover bio">
     <Header class="hidden sm:block" title="About" />
     <Bio />
   </div>

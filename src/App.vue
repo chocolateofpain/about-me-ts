@@ -8,7 +8,12 @@
       class="absolute sticky top-0 left-0 z-10 w-full bg-white"
       v-if="showNavbar && isSmallScreen"
     />
-    <router-view :class="{ 'ml-40': showNavbar && !isSmallScreen }" />
+    <router-view
+      :class="{
+        'ml-40': showNavbar && !isSmallScreen,
+      }"
+      class="test"
+    />
   </div>
 </template>
 
@@ -81,5 +86,9 @@ export default defineComponent({
 .v-enter-from,
 .v-leave-to {
   top: -1000px;
+}
+
+.test {
+  height: calc(100vh - 64px);
 }
 </style>
