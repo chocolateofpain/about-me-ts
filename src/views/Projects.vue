@@ -8,8 +8,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import store from "@/store";
+import { defineComponent, computed, onBeforeMount } from "vue";
+import { useStore } from "vuex";
 import Header from "@/components/Header.vue";
 import ProjectCard from "@/components/ProjectCard.vue";
 
@@ -20,10 +20,18 @@ export default defineComponent({
     ProjectCard,
   },
   setup() {
+    const store = useStore();
     // TODO fetch projects from Github
-    const projects = [];
+
+    onBeforeMount(async () => {
+      await store.dispatch("fetchProjects");
+    });
+
+    const projects2 = computed(() => store.getters.getProjects);
+
     return {
-      projects,
+      projects: computed(() => store.state.projects),
+      projects2,
     };
   },
 });
