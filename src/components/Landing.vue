@@ -1,5 +1,5 @@
 <template>
-  <div class="grid justify-center grid-cols-1 gap-4 sm:grid-cols-2">
+  <div class="grid justify-center grid-cols-1 gap-4 sm:grid-cols-2 mt-11">
     <router-link
       v-for="item in landingPageLinks"
       :key="item.title"

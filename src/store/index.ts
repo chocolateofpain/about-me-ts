@@ -16,11 +16,11 @@ export default createStore({
   },
   actions: {
     async fetchProjects(context) {
-      const projects = await fetch(
+      const githubRepos = await fetch(
         "https://api.github.com/users/chocolateofpain/repos"
       );
+      const projects = await githubRepos.json();
       context.commit("loadProjects", projects);
-      return projects;
     },
   },
   modules: {},
