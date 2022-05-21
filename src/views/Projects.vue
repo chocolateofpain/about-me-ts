@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full bg-center bg-cover bg-palmtree sm:bg-none sm:bg-white">
+  <div class="bg-center bg-cover bg-palmtree sm:bg-none sm:bg-white">
     <Header class="hidden sm:block" title="Projects" />
     <div
       class="grid grid-cols-1 gap-4 pt-4 justify-items-center md:grid-cols-3"
