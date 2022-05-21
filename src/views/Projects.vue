@@ -1,8 +1,10 @@
 <template>
   <div class="w-full bg-center bg-cover bg-palmtree sm:bg-none sm:bg-white">
     <Header class="hidden sm:block" title="Projects" />
-    <div>
-      <ProjectCard v-for="item in projects" :key="item.id" project="item" />
+    <div
+      class="grid grid-cols-1 gap-4 pt-4 justify-items-center md:grid-cols-3"
+    >
+      <ProjectCard v-for="item in projects" :key="item.id" :project="item" />
     </div>
   </div>
 </template>
@@ -21,17 +23,15 @@ export default defineComponent({
   },
   setup() {
     const store = useStore();
-    // TODO fetch projects from Github
 
     onBeforeMount(async () => {
       await store.dispatch("fetchProjects");
     });
 
-    const projects2 = computed(() => store.getters.getProjects);
+    const projects = computed(() => store.getters.getProjects);
 
     return {
-      projects: computed(() => store.state.projects),
-      projects2,
+      projects,
     };
   },
 });
